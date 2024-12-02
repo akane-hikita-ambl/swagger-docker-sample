@@ -1,0 +1,13 @@
+name: swagger-sample
+
+services:
+  # 作成したAPI定義をブラウザで確認する
+  swagger-ui:
+    image: swaggerapi/swagger-ui:v5.18.2
+    ports:
+      - 8080:8080
+    volumes:
+      - ./docs/openapi.yml:/usr/share/nginx/html/docs/openapi.yml
+      - ./docs/paths:/usr/share/nginx/html/docs/paths
+    environment:
+      - SWAGGER_JSON=/usr/share/nginx/html/docs/openapi.yml
