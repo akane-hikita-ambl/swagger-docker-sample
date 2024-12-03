@@ -3,7 +3,7 @@
     "@redocly/cli": "^1.25.15"
   },
   "scripts": {
-    "html": "npx @redocly/cli build-docs ../docs/openapi.yml --output=index.html",
-    "lint": "npx @redocly/cli lint ../docs/openapi.yml"
+    "html": "npx @redocly/cli build-docs ../swagger/openapi.yml --output=index.html",
+    "lint": "npx @redocly/cli lint ../swagger/openapi.yml"
   }
 }

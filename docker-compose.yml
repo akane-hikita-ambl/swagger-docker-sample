@@ -8,7 +8,7 @@ services:
     ports:
       - 8080:8080
     volumes:
-      - ./docs/openapi.yml:/usr/share/nginx/html/docs/openapi.yml
-      - ./docs/paths:/usr/share/nginx/html/docs/paths
+      - ./swagger/openapi.yml:/usr/share/nginx/html/swagger/openapi.yml
+      - ./swagger/paths:/usr/share/nginx/html/swagger/paths
     environment:
-      - SWAGGER_JSON=/usr/share/nginx/html/docs/openapi.yml
+      - SWAGGER_JSON=/usr/share/nginx/html/swagger/openapi.yml

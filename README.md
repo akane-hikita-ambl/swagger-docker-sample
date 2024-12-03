@@ -26,7 +26,7 @@ swagger-ui: v5.18.2
 .
 ├── README.md
 ├── docker-compose.yml
-├── docs
+├── swagger
 │   ├── openapi.yml
 │   └── paths
 └── redoc_cli
@@ -35,7 +35,7 @@ swagger-ui: v5.18.2
     └── package.json
 ```
 
-### `docs`
+### `swagger`
 
  APIのドキュメントはここ
  
