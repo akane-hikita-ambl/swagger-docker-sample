@@ -4,6 +4,7 @@ services:
   # 作成したAPI定義をブラウザで確認する
   swagger-ui:
     image: swaggerapi/swagger-ui:v5.18.2
+    container_name: "swagger-ui"
     ports:
       - 8080:8080
     volumes:

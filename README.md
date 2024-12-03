@@ -44,12 +44,12 @@ docker compose stop
 ```sh
 cd redoc_cli
 npm install
-npm run staticDoc
+npm run html
 ```
 
 ### インストール済みの場合の実行コマンド
 
 ```sh
 cd redoc_cli
-npm run staticDoc
+npm run html
 ```
