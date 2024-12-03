@@ -1,12 +1,55 @@
 # このリポジトリについて
 [Swagger](https://swagger.io/)をDocker環境で動かしてみた
 
-## 各バージョン
+## 利用ツール
 
 ```sh
+# 各バージョン
 swagger-ui: v5.18.2
 @redocly/cli: ^1.25.15
 ```
+
+### Swagger
+
+`OpenAPI`を利用し`REST API`を設計するために使用するツール。今回はその中でも[`Swagger UI`](https://swagger.io/tools/swagger-ui/)を利用。APIのドキュメントを書くために使う。
+
+- [OpenAPI（ver3.0） のドキュメント](https://swagger.io/docs/specification/v3_0/about/)
+- [Swagger UIのドキュメント](https://swagger.io/docs/open-source-tools/swagger-ui/usage/installation/)
+
+### @redocly/cli
+
+`Swagger UI`で作成したAPIドキュメントを、静的HTMLに生成するために使用。諸般の事情で、`@redocly/cli`が生成する静的HTMLと`Swagger UI`が作るAPIドキュメントの見た目が違うが、そういう仕様。
+
+## ディレクトリ構成
+
+```
+.
+├── README.md
+├── docker-compose.yml
+├── docs
+│   ├── openapi.yml
+│   └── paths
+└── redoc_cli
+    ├── index.html
+    ├── package-lock.json
+    └── package.json
+```
+
+### `docs`
+
+ APIのドキュメントはここ
+ 
+#### `openapi.yml`
+
+API全体の概要を記載するドキュメント
+
+#### `paths`
+
+個々のAPIドキュメント（今後のAPI次第でさらにディレクトリ切るかも）
+ 
+### `redoc_cli`
+
+静的HTML生成のためのディレクトリ
 
 ## コンテナ関連コマンド
 ### コンテナ作成
